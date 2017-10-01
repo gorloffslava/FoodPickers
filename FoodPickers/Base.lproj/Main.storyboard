@@ -1,80 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Date-->
+        <scene sceneID="gOa-ew-hbI">
+            <objects>
+                <viewController id="5U8-GU-g9h" customClass="DateViewController" customModule="FoodPickers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2w9-AP-Zel">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wCn-es-Ims">
+                                <rect key="frame" x="16" y="40" width="343" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="528567926.04378003">
+                                    <!--2017-10-01 16:25:26 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hP-PW-sp9">
+                                <rect key="frame" x="156" y="276" width="62" height="30"/>
+                                <state key="normal" title="Выбрать"/>
+                                <connections>
+                                    <action selector="selectButtonTapped:" destination="5U8-GU-g9h" eventType="touchUpInside" id="R6K-ov-Ikg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="wCn-es-Ims" secondAttribute="trailing" id="7Gu-ri-1gO"/>
+                            <constraint firstItem="7hP-PW-sp9" firstAttribute="top" secondItem="wCn-es-Ims" secondAttribute="bottom" constant="20" id="8W9-vL-4bn"/>
+                            <constraint firstItem="wCn-es-Ims" firstAttribute="top" secondItem="ckV-Zn-h5v" secondAttribute="top" constant="20" id="ezR-Tw-beW"/>
+                            <constraint firstItem="wCn-es-Ims" firstAttribute="leading" secondItem="2w9-AP-Zel" secondAttribute="leadingMargin" id="tCv-W8-0yP"/>
+                            <constraint firstItem="7hP-PW-sp9" firstAttribute="centerX" secondItem="2w9-AP-Zel" secondAttribute="centerX" id="yWe-DU-2sb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ckV-Zn-h5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Date" image="date" landscapeImage="date" id="4yW-Rc-Lz5"/>
+                    <connections>
+                        <outlet property="datePicker" destination="wCn-es-Ims" id="huv-8O-yg0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hJl-Fa-hhr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13" y="-689"/>
+        </scene>
+        <!--Соло-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="FoodPickers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4A5-n9-c5G">
+                                <rect key="frame" x="16" y="40" width="343" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="KUg-my-XjU"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="yv2-xi-bOM"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiJ-eY-BkL">
+                                <rect key="frame" x="156" y="250" width="62" height="30"/>
+                                <state key="normal" title="Выбрать"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="CBW-KD-6yS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="4A5-n9-c5G" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="CUJ-cY-sSd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4A5-n9-c5G" secondAttribute="trailing" id="Ghv-Uj-gPw"/>
+                            <constraint firstItem="aiJ-eY-BkL" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="T9z-tZ-KN3"/>
+                            <constraint firstItem="4A5-n9-c5G" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="20" id="XMT-HL-x3U"/>
+                            <constraint firstItem="aiJ-eY-BkL" firstAttribute="top" secondItem="4A5-n9-c5G" secondAttribute="bottom" constant="-6" id="arS-0K-b5C"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Соло" image="single" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="pickerView" destination="4A5-n9-c5G" id="S4C-M0-tOc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Second-->
+        <!--Дуо-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="FoodPickers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6I-FF-mnX">
+                                <rect key="frame" x="16" y="40" width="343" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="NVg-YP-wEh"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="tqS-Jc-AK5"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Uf-dL-Hbp">
+                                <rect key="frame" x="148" y="249" width="78" height="30"/>
+                                <state key="normal" title="Проверить"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="LTd-3Y-cSQ"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Верно/Неверно" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75X-Pv-Z5b">
+                                <rect key="frame" x="124" y="299" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="q6I-FF-mnX" secondAttribute="trailing" id="36l-9P-tEh"/>
+                            <constraint firstItem="0Uf-dL-Hbp" firstAttribute="top" secondItem="q6I-FF-mnX" secondAttribute="bottom" constant="-7" id="RKN-Ny-Si1"/>
+                            <constraint firstItem="q6I-FF-mnX" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="20" id="d7z-CJ-rke"/>
+                            <constraint firstItem="75X-Pv-Z5b" firstAttribute="top" secondItem="0Uf-dL-Hbp" secondAttribute="bottom" constant="20" id="eRQ-ey-58E"/>
+                            <constraint firstItem="75X-Pv-Z5b" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="rXh-VL-txJ"/>
+                            <constraint firstItem="q6I-FF-mnX" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="tA1-B1-6kb"/>
+                            <constraint firstItem="0Uf-dL-Hbp" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="zzy-x2-BEt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Дуо" image="double" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="label" destination="75X-Pv-Z5b" id="DKT-9L-6Up"/>
+                        <outlet property="picker" destination="q6I-FF-mnX" id="2Jx-Vp-Ryo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="JPw-ze-s9q">
+            <objects>
+                <viewController id="1W4-fQ-r3B" customClass="CustomViewController" customModule="FoodPickers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3da-uf-DyO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="nZb-rz-PQX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="sca-jx-EPz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hlN-3A-ipb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-90" y="1226"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Iyj-mr-5W5">
+            <objects>
+                <viewController id="a46-Di-HT9" customClass="DependentViewController" customModule="FoodPickers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2BD-Ip-Vyu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="yuf-wy-MAd"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="rtE-l2-4F7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Kh-Nk-CiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="752" y="1131"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -86,8 +186,11 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
+                        <segue destination="5U8-GU-g9h" kind="relationship" relationship="viewControllers" id="iSS-76-kI6"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="a46-Di-HT9" kind="relationship" relationship="viewControllers" id="4Xr-Q5-B6T"/>
+                        <segue destination="1W4-fQ-r3B" kind="relationship" relationship="viewControllers" id="YYa-C4-1WI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -96,7 +199,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="date" width="25" height="25"/>
+        <image name="double" width="25" height="25"/>
+        <image name="single" width="25" height="25"/>
     </resources>
 </document>

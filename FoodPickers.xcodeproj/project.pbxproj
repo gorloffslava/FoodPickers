@@ -13,6 +13,10 @@
 		CC4863B51F81444B0030D771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC4863B31F81444B0030D771 /* Main.storyboard */; };
 		CC4863B71F81444B0030D771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4863B61F81444B0030D771 /* Assets.xcassets */; };
 		CC4863BA1F81444B0030D771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC4863B81F81444B0030D771 /* LaunchScreen.storyboard */; };
+		CC4863C21F81450D0030D771 /* DependentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4863C11F81450D0030D771 /* DependentViewController.swift */; };
+		CC4863C41F8145190030D771 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4863C31F8145190030D771 /* DateViewController.swift */; };
+		CC4863C61F8145280030D771 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4863C51F8145280030D771 /* CustomViewController.swift */; };
+		CC4863CD1F8159260030D771 /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4863CC1F8159260030D771 /* Crew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		CC4863B61F81444B0030D771 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC4863B91F81444B0030D771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC4863BB1F81444B0030D771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC4863C11F81450D0030D771 /* DependentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependentViewController.swift; sourceTree = "<group>"; };
+		CC4863C31F8145190030D771 /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		CC4863C51F8145280030D771 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		CC4863CC1F8159260030D771 /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				CC4863B61F81444B0030D771 /* Assets.xcassets */,
 				CC4863B81F81444B0030D771 /* LaunchScreen.storyboard */,
 				CC4863BB1F81444B0030D771 /* Info.plist */,
+				CC4863C11F81450D0030D771 /* DependentViewController.swift */,
+				CC4863C31F8145190030D771 /* DateViewController.swift */,
+				CC4863C51F8145280030D771 /* CustomViewController.swift */,
+				CC4863CC1F8159260030D771 /* Crew.swift */,
 			);
 			path = FoodPickers;
 			sourceTree = "<group>";
@@ -139,8 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC4863C41F8145190030D771 /* DateViewController.swift in Sources */,
 				CC4863B21F81444B0030D771 /* SecondViewController.swift in Sources */,
 				CC4863AE1F81444B0030D771 /* AppDelegate.swift in Sources */,
+				CC4863CD1F8159260030D771 /* Crew.swift in Sources */,
+				CC4863C61F8145280030D771 /* CustomViewController.swift in Sources */,
+				CC4863C21F81450D0030D771 /* DependentViewController.swift in Sources */,
 				CC4863B01F81444B0030D771 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
