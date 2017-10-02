@@ -17,6 +17,8 @@
 		CC4863C41F8145190030D771 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4863C31F8145190030D771 /* DateViewController.swift */; };
 		CC4863C61F8145280030D771 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4863C51F8145280030D771 /* CustomViewController.swift */; };
 		CC4863CD1F8159260030D771 /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4863CC1F8159260030D771 /* Crew.swift */; };
+		CC4863D11F8287FA0030D771 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = CC4863CF1F8287F50030D771 /* win.wav */; };
+		CC4863D21F8287FE0030D771 /* process.wav in Resources */ = {isa = PBXBuildFile; fileRef = CC4863D01F8287F50030D771 /* process.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		CC4863C31F8145190030D771 /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		CC4863C51F8145280030D771 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		CC4863CC1F8159260030D771 /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
+		CC4863CF1F8287F50030D771 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
+		CC4863D01F8287F50030D771 /* process.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = process.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		CC4863AC1F81444B0030D771 /* FoodPickers */ = {
 			isa = PBXGroup;
 			children = (
+				CC4863CE1F82851A0030D771 /* Sounds */,
 				CC4863AD1F81444B0030D771 /* AppDelegate.swift */,
 				CC4863AF1F81444B0030D771 /* FirstViewController.swift */,
 				CC4863B11F81444B0030D771 /* SecondViewController.swift */,
@@ -77,6 +82,15 @@
 				CC4863CC1F8159260030D771 /* Crew.swift */,
 			);
 			path = FoodPickers;
+			sourceTree = "<group>";
+		};
+		CC4863CE1F82851A0030D771 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				CC4863D01F8287F50030D771 /* process.wav */,
+				CC4863CF1F8287F50030D771 /* win.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +152,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC4863D21F8287FE0030D771 /* process.wav in Resources */,
 				CC4863BA1F81444B0030D771 /* LaunchScreen.storyboard in Resources */,
+				CC4863D11F8287FA0030D771 /* win.wav in Resources */,
 				CC4863B71F81444B0030D771 /* Assets.xcassets in Resources */,
 				CC4863B51F81444B0030D771 /* Main.storyboard in Resources */,
 			);

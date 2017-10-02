@@ -144,17 +144,52 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--Item-->
+        <!--Leaving Dead-->
         <scene sceneID="JPw-ze-s9q">
             <objects>
                 <viewController id="1W4-fQ-r3B" customClass="CustomViewController" customModule="FoodPickers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3da-uf-DyO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6n-0s-mHv">
+                                <rect key="frame" x="16" y="20" width="343" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="1W4-fQ-r3B" id="h5w-DS-Ndu"/>
+                                    <outlet property="delegate" destination="1W4-fQ-r3B" id="Pb4-7G-TtY"/>
+                                </connections>
+                            </pickerView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Приз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5G2-ve-Jxg">
+                                <rect key="frame" x="167" y="306" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="por-V0-ghy">
+                                <rect key="frame" x="154" y="256" width="67" height="30"/>
+                                <state key="normal" title="Вращать!"/>
+                                <connections>
+                                    <action selector="spin:" destination="1W4-fQ-r3B" eventType="touchUpInside" id="OLV-Vf-EYS"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="D6n-0s-mHv" secondAttribute="trailing" id="7N6-k6-gYV"/>
+                            <constraint firstItem="por-V0-ghy" firstAttribute="top" secondItem="D6n-0s-mHv" secondAttribute="bottom" constant="20" id="C6h-kh-Wf7"/>
+                            <constraint firstItem="5G2-ve-Jxg" firstAttribute="centerX" secondItem="3da-uf-DyO" secondAttribute="centerX" id="DyU-s6-37d"/>
+                            <constraint firstItem="D6n-0s-mHv" firstAttribute="top" secondItem="nZb-rz-PQX" secondAttribute="top" id="Uph-6W-i4Y"/>
+                            <constraint firstItem="por-V0-ghy" firstAttribute="centerX" secondItem="3da-uf-DyO" secondAttribute="centerX" id="VHy-Q1-QbT"/>
+                            <constraint firstItem="D6n-0s-mHv" firstAttribute="leading" secondItem="3da-uf-DyO" secondAttribute="leadingMargin" id="eng-n4-fyb"/>
+                            <constraint firstItem="5G2-ve-Jxg" firstAttribute="top" secondItem="por-V0-ghy" secondAttribute="bottom" constant="20" id="vMf-Ql-rKC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nZb-rz-PQX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="sca-jx-EPz"/>
+                    <tabBarItem key="tabBarItem" title="Leaving Dead" image="custom" id="sca-jx-EPz"/>
+                    <connections>
+                        <outlet property="label" destination="5G2-ve-Jxg" id="pcr-18-jk6"/>
+                        <outlet property="picker" destination="D6n-0s-mHv" id="DSA-1J-88X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlN-3A-ipb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,6 +246,22 @@
             </objects>
             <point key="canvasLocation" x="752" y="1131"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="2A7-lT-gBQ">
+            <objects>
+                <viewController id="ad1-Bq-fU5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vK2-qL-f6I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="OeZ-x4-zLz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="l5t-wJ-ZrP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qna-jS-vKo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-871" y="380"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -226,6 +277,7 @@
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="a46-Di-HT9" kind="relationship" relationship="viewControllers" id="4Xr-Q5-B6T"/>
                         <segue destination="1W4-fQ-r3B" kind="relationship" relationship="viewControllers" id="YYa-C4-1WI"/>
+                        <segue destination="ad1-Bq-fU5" kind="relationship" relationship="viewControllers" id="oCi-TS-tFu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -234,6 +286,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="custom" width="25" height="25"/>
         <image name="date" width="25" height="25"/>
         <image name="dependent" width="25" height="25"/>
         <image name="double" width="25" height="25"/>
