@@ -45,4 +45,8 @@ class Crew {
         return self.crew.map{$0.lastname} //Создаём отображение из команды в массив только из их фамилий
     }
     
+    static func findRangForName(_ name: String) -> String? {
+        return self.crew.filter{$0.name == name}.first?.rang
+    }
+    
 }
